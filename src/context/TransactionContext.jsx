@@ -9,9 +9,9 @@ const { ethereum } = window;
 
 
 const createEthereumContract = async () => {
-  const provider = new ethers.providers.Web3Provider(ethereum);
-  const signer = provider.getSigner();
-  const transactionsContract = new ethers.Contract(
+  const provider = new ethers.providers.Web3Provider(ethereum);   //The provider connects to a Web3-enabled environment,allowing you to interact with the Ethereum blockchain.
+  const signer = provider.getSigner();      //signer is an object that can sign transactions on behalf of an Ethereum account.
+  const transactionsContract = new ethers.Contract( //instance of an Ethereum contract using the ethers.Contract
     contractAddress,
     contractABI,
     signer
